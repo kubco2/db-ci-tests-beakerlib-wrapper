@@ -1,0 +1,3 @@
+PURPOSE of /CoreOS/cassandra/Sanity/db-ci-tests
+Description: run ci tests
+Author: Jakub Janco <jjanco@redhat.com>
