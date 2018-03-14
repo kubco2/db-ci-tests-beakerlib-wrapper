@@ -23,7 +23,7 @@
 #
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-export TEST=/CoreOS/cassandra/Sanity/db-ci-tests
+export TEST=/CoreOS/beakerlib/Sanity/db-ci-tests
 export TESTVERSION=1.0
 
 BUILT_FILES=
@@ -52,7 +52,7 @@ $(METADATA): Makefile
 	@echo "Description:     run ci tests" >> $(METADATA)
 	@echo "Type:            Sanity" >> $(METADATA)
 	@echo "TestTime:        5m" >> $(METADATA)
-	@echo "RunFor:          cassandra" >> $(METADATA)
+	@echo "RunFor:          beakerlib" >> $(METADATA)
 	@echo "Requires:        beakerlib" >> $(METADATA)
 	@echo "Priority:        Normal" >> $(METADATA)
 	@echo "License:         GPLv2+" >> $(METADATA)
