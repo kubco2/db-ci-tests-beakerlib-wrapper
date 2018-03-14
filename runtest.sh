@@ -29,6 +29,7 @@
 . /usr/bin/rhts-environment.sh || exit 1
 . /usr/share/beakerlib/beakerlib.sh || exit 1
 
+[ -z "$TEST_REPO"] && TEST_REPO="https://github.com/kubco2/db-ci-tests.git"
 PACKAGE="cassandra"
 KOJI_TASK="25697502"
 
@@ -37,7 +38,7 @@ rlJournalStart
         rlRun "TmpDir=\$(mktemp -d)" 0 "Creating tmp directory"
         rlRun "pushd $TmpDir"
         rlRun "yum -y install git"
-        rlRun "git clone https://github.com/kubco2/db-ci-tests.git"
+        rlRun "git clone $TEST_REPO"
     rlPhaseEnd
 
     rlPhaseStartTest
