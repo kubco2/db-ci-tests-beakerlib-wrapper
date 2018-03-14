@@ -44,6 +44,7 @@ rlJournalStart
     rlPhaseStartTest
         rlRun "pushd db-ci-tests"
         rlRun "./run-koji.sh $PACKAGE $KOJI_TASK"
+        rlRun "popd"
         rlRun "ls /tmp/db-ci-results-*/tests.log" 0
         cat /tmp/db-ci-results-*/tests.log | while read line; do 
             rlAssertEquals "$(echo $line | cut -d' ' -f2)" "[PASSED]" "$(echo $line | cut -d' ' -f1)"; 
